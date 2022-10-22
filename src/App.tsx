@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route, } from "react-router-dom";
-import Layout from './Layout'
+import Layout from '@/Layout'
 import Top from './Top'
 
 function App() {
