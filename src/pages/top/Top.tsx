@@ -1,9 +1,13 @@
 import { useState } from 'react'
+
+import { useStore } from "@/libs/store";
+
 import reactLogo from '@/assets/react.svg'
 import './Top.css'
 
 function Top() {
-  const [count, setCount] = useState(0)
+  const count = useStore((state) => state.count);
+  const increment = useStore((state) => state.increment);
 
   return (
     <div className="App">
@@ -17,7 +21,7 @@ function Top() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={increment}>
           count is {count}
         </button>
         <p>
