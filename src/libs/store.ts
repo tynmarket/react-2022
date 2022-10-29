@@ -1,4 +1,4 @@
-import create from "zustand";
+import create from 'zustand';
 
 interface Count {
   count: number;
@@ -7,7 +7,8 @@ interface Count {
 
 export const useStore = create<Count>((set) => ({
   count: 0,
-  increment: () => set((state) => {
-    return { count: state.count + 1 }
-  })
+  increment: () =>
+    set((state) => {
+      return { count: state.count + 1 };
+    }),
 }));
