@@ -8,7 +8,9 @@ export default defineConfig({
     alias: [{ find: '@', replacement: '/src' }]
   },
   plugins: [
-    react(),
+    react({
+      jsxImportSource: '@emotion/react'
+    }),
     checker({
       typescript: true,
     })
